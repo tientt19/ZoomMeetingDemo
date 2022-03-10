@@ -15,5 +15,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func joinAMetting(_ sender :  UIButton) {
+        
+    }
+    
+    @IBAction func startAnInstantMeeting(_ sender :  UIButton) {
+        
+    }
 }
 

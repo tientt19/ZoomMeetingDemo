@@ -8,22 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		526C860227DA1E0E0015B9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C860127DA1E0E0015B9AE /* AppDelegate.swift */; };
-		526C860427DA1E0E0015B9AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C860327DA1E0E0015B9AE /* SceneDelegate.swift */; };
 		526C860627DA1E0E0015B9AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C860527DA1E0E0015B9AE /* ViewController.swift */; };
 		526C860927DA1E0E0015B9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C860727DA1E0E0015B9AE /* Main.storyboard */; };
 		526C860B27DA1E110015B9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526C860A27DA1E110015B9AE /* Assets.xcassets */; };
 		526C860E27DA1E110015B9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C860C27DA1E110015B9AE /* LaunchScreen.storyboard */; };
+		526C861927DA20800015B9AE /* MobileRTCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 526C861627DA20800015B9AE /* MobileRTCResources.bundle */; };
+		526C861C27DA20A80015B9AE /* MobileRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C861827DA20800015B9AE /* MobileRTC.xcframework */; };
+		526C861D27DA20A80015B9AE /* MobileRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526C861827DA20800015B9AE /* MobileRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		526C861E27DA20A80015B9AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				526C861D27DA20A80015B9AE /* MobileRTC.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		526C85FE27DA1E0E0015B9AE /* ZoomMeetingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomMeetingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C860127DA1E0E0015B9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		526C860327DA1E0E0015B9AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		526C860527DA1E0E0015B9AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		526C860827DA1E0E0015B9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		526C860A27DA1E110015B9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		526C860D27DA1E110015B9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		526C860F27DA1E110015B9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526C861627DA20800015B9AE /* MobileRTCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobileRTCResources.bundle; sourceTree = "<group>"; };
+		526C861827DA20800015B9AE /* MobileRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MobileRTC.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526C861C27DA20A80015B9AE /* MobileRTC.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +74,8 @@
 		526C860027DA1E0E0015B9AE /* ZoomMeetingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				526C861527DA20800015B9AE /* lib */,
 				526C860127DA1E0E0015B9AE /* AppDelegate.swift */,
-				526C860327DA1E0E0015B9AE /* SceneDelegate.swift */,
 				526C860527DA1E0E0015B9AE /* ViewController.swift */,
 				526C860727DA1E0E0015B9AE /* Main.storyboard */,
 				526C860A27DA1E110015B9AE /* Assets.xcassets */,
@@ -65,6 +83,15 @@
 				526C860F27DA1E110015B9AE /* Info.plist */,
 			);
 			path = ZoomMeetingDemo;
+			sourceTree = "<group>";
+		};
+		526C861527DA20800015B9AE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				526C861627DA20800015B9AE /* MobileRTCResources.bundle */,
+				526C861827DA20800015B9AE /* MobileRTC.xcframework */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +104,7 @@
 				526C85FA27DA1E0E0015B9AE /* Sources */,
 				526C85FB27DA1E0E0015B9AE /* Frameworks */,
 				526C85FC27DA1E0E0015B9AE /* Resources */,
+				526C861E27DA20A80015B9AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				526C860E27DA1E110015B9AE /* LaunchScreen.storyboard in Resources */,
+				526C861927DA20800015B9AE /* MobileRTCResources.bundle in Resources */,
 				526C860B27DA1E110015B9AE /* Assets.xcassets in Resources */,
 				526C860927DA1E0E0015B9AE /* Main.storyboard in Resources */,
 			);
@@ -140,7 +169,6 @@
 			files = (
 				526C860627DA1E0E0015B9AE /* ViewController.swift in Sources */,
 				526C860227DA1E0E0015B9AE /* AppDelegate.swift in Sources */,
-				526C860427DA1E0E0015B9AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,24 +317,31 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CY4CXRJ4H3;
+				DEVELOPMENT_TEAM = 4B4PPXTKAN;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZoomMeetingDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We will use your Bluetooth to access your Bluetooth headphones.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For people to see you during meetings, we need access to your camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For people to hear you during meetings, we need access to your microphone.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For people to share, we need access to your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.ZoomMeetingDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.ZoomMeetingDemo123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES_ERROR;
 			};
 			name = Debug;
 		};
@@ -317,24 +352,31 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CY4CXRJ4H3;
+				DEVELOPMENT_TEAM = 4B4PPXTKAN;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZoomMeetingDemo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "We will use your Bluetooth to access your Bluetooth headphones.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For people to see you during meetings, we need access to your camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For people to hear you during meetings, we need access to your microphone.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For people to share, we need access to your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.ZoomMeetingDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tientran.ZoomMeetingDemo123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES_ERROR;
 			};
 			name = Release;
 		};
