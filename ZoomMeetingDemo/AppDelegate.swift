@@ -20,6 +20,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupSDK(sdkKey: sdkKey, sdkSecret: sdkSecret)
         return true
     }
+    
+    // Logs the user out of the app upon application termination.
+    // This is not a necessary action. In real use cases, the SDK should be alerted of app events. For example, in applicationWillTerminate(_ application: UIApplication), MobileRTC.shared().appWillTerminate should be called.
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Obtain the MobileRTCAuthService from the Zoom SDK, this service can log in a Zoom user, log out a Zoom user, authorize the Zoom SDK etc.
+        if let authorizationService = MobileRTC.shared().getAuthService() {
+            // Call logoutRTC() to log the user out.
+            authorizationService.logoutRTC()
+            // Notify MobileRTC of appWillTerminate call.
+            MobileRTC.shared().appWillTerminate()
+        }
+    }
+     
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Notify MobileRTC of appWillResignActive call.
+        MobileRTC.shared().appWillResignActive()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Notify MobileRTC of appDidBecomeActive call.
+        MobileRTC.shared().appDidBecomeActive()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Notify MobileRTC of appDidEnterBackgroud call.
+        MobileRTC.shared().appDidEnterBackgroud()
+    }
+    
     /// setupSDK Creates, Initializes, and Authorizes an instance of the Zoom SDK. This must be called before calling any other SDK functions.
     /// - Parameters:
     ///   - sdkKey: A valid SDK Client Key provided by the Zoom Marketplace.
